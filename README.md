@@ -70,7 +70,7 @@ This mod uses **Calendar Versioning (CalVer)**:
 
 ## License
 
-Specify your license here (MIT, ARR, etc.).
+Apache 2.0
 
 ---
 
