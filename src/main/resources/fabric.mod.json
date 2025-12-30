@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "insomnia_reminder",
+  "version": "${version}",
+  "name": "Insomnia Reminder",
+  "description": "Reminds you to sleep when you have insomnia in the overworld to prevent phantom attacks and wakes you up with a good morning message.",
+  "authors": [
+    "OldGrizzly"
+  ],
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "net.nullstorm.insomnia_reminder.InsomniaReminderClient"
+    ],
+    "modmenu": [
+      "net.nullstorm.insomnia_reminder.InsomniaReminderModMenu"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.15.0",
+    "minecraft": ">=1.21.6",
+    "fabric-api": "*",
+    "modmenu": "*",
+    "cloth-config": "*"
+  },
+  "icon": "assets/insomnia_reminder/icon.png"
+}

@@ -1,0 +1,13 @@
+pluginManagement {
+    repositories {
+        // Fabric Loom lives here
+        maven { url = "https://maven.fabricmc.net/" }
+        // Gradle Plugin Portal (still useful for other plugins)
+        gradlePluginPortal()
+        // Optional, but harmless
+        mavenCentral()
+    }
+}
+
+rootProject.name = "insomnia-reminder"
+

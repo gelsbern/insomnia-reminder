@@ -1,0 +1,15 @@
+{
+  "rooster": {
+    "category": "ambient",
+    "sounds": [
+      "insomnia_reminder:rooster"
+    ]
+  },
+  "wolf": {
+    "category": "ambient",
+    "sounds": [
+      "insomnia_reminder:wolf"
+    ]
+  }
+}
+
