@@ -45,4 +45,42 @@ Without these mods, default settings will still apply and the mod will function 
 
 - **Minecraft:** 1.21.6+
 - **Loader:** Fabric
-- **Environment:** Client-sid
+- **Environment:** Client-side only
+
+Safe to use on servers — no server installation required.
+
+---
+
+## Installation
+
+1. Install **Fabric Loader** for your Minecraft version
+2. Install **Fabric API**
+3. (Optional) Install **Mod Menu** and **Cloth Config**
+4. Drop the `insomnia-reminder-*.jar` into your `mods` folder
+5. Launch the game
+
+---
+
+## Versioning
+
+This mod uses **Calendar Versioning (CalVer)**:
+
+
+---
+
+## License
+
+Specify your license here (MIT, ARR, etc.).
+
+---
+
+## Author
+
+Created by **OldGrizzly**
+
+---
+
+## Contributing
+
+Issues and pull requests are welcome.  
+Please open an issue first if you plan a larger change.
