@@ -140,7 +140,7 @@ public class InsomniaReminderClient implements ClientModInitializer {
         // Detect TIME_SINCE_REST (0 == just slept) as a backup.
         int timeSinceRest = client.player.getStatHandler()
                 .getStat(Stats.CUSTOM.getOrCreateStat(Stats.TIME_SINCE_REST));
-        boolean restJustReset = (lastTimeSinceRest != -1 && lastTimeSinceRest > 0 && timeSinceRest == 0);
+        boolean restJustReset = (lastTimeSinceRest != -1 && timeSinceRest < lastTimeSinceRest);
         lastTimeSinceRest = timeSinceRest;
 
         // Detect a big time jump forward (sleep skipping the night).
@@ -157,6 +157,12 @@ public class InsomniaReminderClient implements ClientModInitializer {
             boolean wasNight = lastTimeOfDaySeen >= 12000;
             boolean isMorning = timeOfDay >= AM_TICK && timeOfDay <= AM_TICK + SLEEP_WAKE_GRACE_TICKS;
             jumpedFromNightToMorning = wasNight && isMorning;
+			boolean sleptThisTick = jumpedFromNightToMorning || restJustReset;
+        if (sleptThisTick) {
+        // Force-reset insomnia state; client stat sync can lag behind actual sleep
+        timeSinceRest = 0;
+        lastTimeSinceRest = 0;
+        }
         }
         lastTimeOfDaySeen = timeOfDay;
 
